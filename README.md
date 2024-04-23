@@ -32,6 +32,26 @@ http://localhost:8080/news
     "news_date": "01/09/2024"
 }
 ```
+> Exceptions (400 Bad Request)
+
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Titulo não pode estar vazio."
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "País não pode estar vazio."
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Data não pode estar vazio"
+}
+```
 ___
 ## Buscar todas as noticias ordenado por data mais recente.
 ```json
@@ -121,6 +141,26 @@ http://localhost:8080/news/{id}
     "news_date": "01/09/2024"
 }
 ```
+> Exceptions (400 Bad Request)
+
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Titulo não pode estar vazio."
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "País não pode estar vazio."
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Data não pode estar vazio"
+}
+```
 ___
 ## Deletar noticia por id
 ```json
@@ -149,6 +189,25 @@ http://localhost:8080/sport
     "sport_title": "Titulo",
     "sport_team": "Real Madrid",
     "sport_date": "01/01/2023"
+}
+```
+> Exceptions
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Campo titulo não pode estar vazio"
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Campo nome de time não pode estar vazio"
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "O campo data não pode estar nulo"
 }
 ```
 ___
@@ -224,6 +283,25 @@ http://localhost:8080/sport/{id}
     "sport_title": "Titulo atualizado",
     "sport_team": "Real Madrid",
     "sport_date": "01/01/2023"
+}
+```
+> Exceptions
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Campo titulo não pode estar vazio"
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "Campo nome de time não pode estar vazio"
+}
+```
+```json
+{
+    "status": "BAD_REQUEST",
+    "message": "O campo data não pode estar nulo"
 }
 ```
 ## Deletar postagem de esporte por id
