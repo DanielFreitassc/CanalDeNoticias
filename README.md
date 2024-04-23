@@ -285,7 +285,7 @@ http://localhost:8080/sport/{id}
     "sport_date": "01/01/2023"
 }
 ```
-> Exceptions
+> Exceptions (400 Bad Request)
 ```json
 {
     "status": "BAD_REQUEST",
