@@ -78,7 +78,6 @@ http://localhost:8080/news/{id}
 }
 ```
 > Exeption (404 Not Found)
-
 ````Nenhum noticia com este id````
 ___
 ## Atualizar noticia por id unico
