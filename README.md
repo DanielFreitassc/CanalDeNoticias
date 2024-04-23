@@ -12,6 +12,27 @@ http://localhost:8080/ajuda
 }
 ```
 ___
+## Cadastrar noticias 
+```json
+http://localhost:8080/news
+```
+```json
+{
+    "news_title":"Titulo da noticias",
+    "news_country":"Brasil",
+    "news_date":"01/09/2024"
+}
+```
+> Response Body (201 Created)
+```json
+{
+    "news_id": 1,
+    "news_title": "Titulo da noticias",
+    "news_country": "Brasil",
+    "news_date": "01/09/2024"
+}
+```
+___
 ## Buscar todas as noticias ordenado por data mais recente.
 ```json
 http://localhost:8080/news
@@ -109,3 +130,83 @@ http://localhost:8080/news/{id}
 
 > Exception (404)
 ````Nenhum noticia com este id````
+___
+## Cadastrar esportes 
+```json
+http://localhost:8080/sport
+```
+```json
+{
+    "sport_title":"Titulo",
+    "sport_team":"Real Madrid",
+    "sport_date":"01/01/2023"
+}
+```
+> Response Body (201 Created)
+```json
+{
+    "sport_id": 1,
+    "sport_title": "Titulo",
+    "sport_team": "Real Madrid",
+    "sport_date": "01/01/2023"
+}
+```
+___
+## Buscar todos os esportes ordenado por data da postagem
+```json
+http://localhost:8080/sport
+```
+> Response (200 OK)
+```json
+[
+    {
+        "sport_id": 1,
+        "sport_title": "Titulo",
+        "sport_team": "Real Madrid",
+        "sport_date": "01/09/2023",
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8080/sport/1"
+            }
+        ]
+    },
+    {
+        "sport_id": 2,
+        "sport_title": "Titulo",
+        "sport_team": "Real Madrid",
+        "sport_date": "01/01/2023",
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8080/sport/2"
+            }
+        ]
+    }
+]
+```
+___
+## Buscar postagem de esportes por id
+```json
+http://localhost:8080/sport/1
+```
+> Response body (200 OK)
+```json
+{
+    "sport_id": 1,
+    "sport_title": "Titulo",
+    "sport_team": "Real Madrid",
+    "sport_date": "01/09/2023",
+    "links": [
+        {
+            "rel": "Lista de esportes",
+            "href": "http://localhost:8080/sport"
+        }
+    ]
+}
+```
+## Deletar postagem de esportes por id
+```json
+http://localhost:8080/sport/1
+```
+> Response (204 Not Content)
