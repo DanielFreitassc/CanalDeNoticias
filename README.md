@@ -186,9 +186,9 @@ http://localhost:8080/sport
 ]
 ```
 ___
-## Buscar postagem de esportes por id
+## Buscar postagem de esporte por id
 ```json
-http://localhost:8080/sport/1
+http://localhost:8080/sport/{id}
 ```
 > Response body (200 OK)
 ```json
@@ -205,7 +205,28 @@ http://localhost:8080/sport/1
     ]
 }
 ```
-## Deletar postagem de esportes por id
+___
+## Atualizar postagem de esporte por id
+```json
+http://localhost:8080/sport/{id}
+```
+```json
+{
+    "sport_title":"Titulo",
+    "sport_team":"Real Madrid",
+    "sport_date":"01/01/2023"
+}
+```
+> Response body (200 OK)
+```json
+{
+    "sport_id": 1,
+    "sport_title": "Titulo atualizado",
+    "sport_team": "Real Madrid",
+    "sport_date": "01/01/2023"
+}
+```
+## Deletar postagem de esporte por id
 ```json
 http://localhost:8080/sport/1
 ```
