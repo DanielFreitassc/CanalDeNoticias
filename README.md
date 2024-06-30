@@ -172,7 +172,7 @@ http://localhost:8080/news/{id}
 ````Nenhum noticia com este id````
 ___
 ## Cadastrar esportes 
-```json
+```yml
 http://localhost:8080/sport
 ```
 ```yml
