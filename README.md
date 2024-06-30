@@ -1,7 +1,7 @@
 # Rotas de consumo da api
 
 ## Buscar nome da equipe
-```json
+```yml
 http://localhost:8080/ajuda
 ```
 > Response body (200 OK)
@@ -13,10 +13,10 @@ http://localhost:8080/ajuda
 ```
 ___
 ## Cadastrar noticias 
-```json
+```yml
 http://localhost:8080/news
 ```
-```json
+```yml
 {
     "news_title":"Titulo da noticias",
     "news_country":"Brasil",
@@ -24,7 +24,7 @@ http://localhost:8080/news
 }
 ```
 > Response Body (201 Created)
-```json
+```yml
 {
     "news_id": 1,
     "news_title": "Titulo da noticias",
@@ -34,19 +34,19 @@ http://localhost:8080/news
 ```
 > Exceptions (400 Bad Request)
 
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Titulo não pode estar vazio."
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "País não pode estar vazio."
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Data não pode estar vazio"
@@ -54,11 +54,11 @@ http://localhost:8080/news
 ```
 ___
 ## Buscar todas as noticias ordenado por data mais recente.
-```json
+```yml
 http://localhost:8080/news
 ```
 > Response body (200 OK)
-```json
+```yml
 [
     {
         "news_id": 1,
@@ -100,11 +100,11 @@ http://localhost:8080/news
 ```
 ___
 ## Buscar noticia por id unico
-```json
+```yml
 http://localhost:8080/news/{id}
 ```
 > Response body (200 OK)
-```json
+```yml
 {
     "news_id": 1,
     "news_title": "Titulo da noticias",
@@ -122,10 +122,10 @@ http://localhost:8080/news/{id}
 ````Nenhum noticia com este id````
 ___
 ## Atualizar noticia por id unico
-```json
+```yml
 http://localhost:8080/news/{id}
 ```
-```json
+```yml
 {
     "news_title":"Titulo da noticias atualizado",
     "news_country":"Brasil",
@@ -133,7 +133,7 @@ http://localhost:8080/news/{id}
 }
 ```
 > Response body (200 ok)
-```json
+```yml
 {
     "news_id": 1,
     "news_title": "Titulo da noticias atualizado",
@@ -143,19 +143,19 @@ http://localhost:8080/news/{id}
 ```
 > Exceptions (400 Bad Request)
 
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Titulo não pode estar vazio."
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "País não pode estar vazio."
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Data não pode estar vazio"
@@ -163,7 +163,7 @@ http://localhost:8080/news/{id}
 ```
 ___
 ## Deletar noticia por id
-```json
+```yml
 http://localhost:8080/news/{id}
 ```
 > Response (204 No Content)
@@ -175,7 +175,7 @@ ___
 ```json
 http://localhost:8080/sport
 ```
-```json
+```yml
 {
     "sport_title":"Titulo",
     "sport_team":"Real Madrid",
@@ -183,7 +183,7 @@ http://localhost:8080/sport
 }
 ```
 > Response Body (201 Created)
-```json
+```yml
 {
     "sport_id": 1,
     "sport_title": "Titulo",
@@ -192,19 +192,19 @@ http://localhost:8080/sport
 }
 ```
 > Exceptions
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Campo titulo não pode estar vazio"
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Campo nome de time não pode estar vazio"
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "O campo data não pode estar nulo"
@@ -212,11 +212,11 @@ http://localhost:8080/sport
 ```
 ___
 ## Buscar todos os esportes ordenado por data da postagem
-```json
+```yml
 http://localhost:8080/sport
 ```
 > Response (200 OK)
-```json
+```yml
 [
     {
         "sport_id": 1,
@@ -246,11 +246,11 @@ http://localhost:8080/sport
 ```
 ___
 ## Buscar postagem de esporte por id
-```json
+```yml
 http://localhost:8080/sport/{id}
 ```
 > Response body (200 OK)
-```json
+```yml
 {
     "sport_id": 1,
     "sport_title": "Titulo",
@@ -266,10 +266,10 @@ http://localhost:8080/sport/{id}
 ```
 ___
 ## Atualizar postagem de esporte por id
-```json
+```yml
 http://localhost:8080/sport/{id}
 ```
-```json
+```yml
 {
     "sport_title":"Titulo",
     "sport_team":"Real Madrid",
@@ -277,7 +277,7 @@ http://localhost:8080/sport/{id}
 }
 ```
 > Response body (200 OK)
-```json
+```yml
 {
     "sport_id": 1,
     "sport_title": "Titulo atualizado",
@@ -286,26 +286,26 @@ http://localhost:8080/sport/{id}
 }
 ```
 > Exceptions (400 Bad Request)
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Campo titulo não pode estar vazio"
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "Campo nome de time não pode estar vazio"
 }
 ```
-```json
+```yml
 {
     "status": "BAD_REQUEST",
     "message": "O campo data não pode estar nulo"
 }
 ```
 ## Deletar postagem de esporte por id
-```json
+```yml
 http://localhost:8080/sport/1
 ```
 > Response (204 Not Content)
